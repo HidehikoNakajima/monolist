@@ -1,6 +1,11 @@
 <% content_for :tags do %>
-  <meta name="title" content="<%= current_user.name %> - monolist" />
-  <meta name="description" content="<%= current_user.name %> のモノページ。<%= current_user.name %> の欲しいモノ、持ってるモノを表示しています。" />
+  <% if current_user.name.present? %>
+    <meta name="title" content="<%= current_user.name %> - monolist" />
+    <meta name="description" content="<%= current_user.name %> のモノページ。<%= current_user.name %> の欲しいモノ、持ってるモノを表示しています。" />
+  <% else %>
+    <meta name="title" content="monolist" />
+    <meta name="description" content="みんなの欲しいモノ、持ってるモノを表示しています。" /> 
+  <% end %>
 <% end %>
 
 <div class="cover">
