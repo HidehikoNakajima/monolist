@@ -1,3 +1,8 @@
+<% content_for :tags do %>
+  <meta name="title" content="<%= current_user.name %> - monolist" />
+  <meta name="description" content="<%= current_user.name %> のモノページ。<%= current_user.name %> の欲しいモノ、持ってるモノが表示されます。" />
+<% end %>
+
 <div class="user-profile">
   <div class="icon">
     <%= gravatar_for user, size: 100 %>

@@ -164,3 +164,12 @@
     }
   }
 }
+
+.users_ul{
+  list-style:none;
+}
+.users_li{
+  display: inline-block;
+  font-size: 12px;
+  width: 10%;
+}
