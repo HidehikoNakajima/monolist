@@ -1,9 +1,14 @@
+<% content_for :title do %>
+  <% if current_user.present? %>
+    <%= current_user.name %> - monolist
+  <% else %>  
+    monolist
+  <% end %>
+<% end %>
 <% content_for :tags do %>
   <% if current_user.present? %>
-    <meta name="title" content="<%= current_user.name %> - monolist" />
     <meta name="description" content="<%= current_user.name %> のモノページ。<%= current_user.name %> の欲しいモノ、持ってるモノを表示しています。" />
   <% else %>
-    <meta name="title" content="monolist" />
     <meta name="description" content="みんなの欲しいモノ、持ってるモノを表示しています。" /> 
   <% end %>
 <% end %>
